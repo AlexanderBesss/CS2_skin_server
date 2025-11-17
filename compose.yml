@@ -1,0 +1,23 @@
+services:
+
+  db:
+    image: mysql:latest
+    container_name: Skins-DB
+    restart: always
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: 12345
+      MYSQL_USER: skins
+      MYSQL_PASSWORD: 12345
+      MYSQL_DATABASE: skins
+  
+  webserver:
+    image: php:8.3-apache
+    container_name: skins_web_server
+    build: .
+    ports:
+      - "80:80"
+    volumes:
+      - ./website:/var/www/html
+      

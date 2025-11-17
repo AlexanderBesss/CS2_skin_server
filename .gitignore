@@ -1,0 +1,9 @@
+server/**
+!server/.gitkeep
+steamcmd/linux/**
+!steamcmd/linux/.gitkeep
+
+steamcmd/windows/**
+!steamcmd/windows/steamcmd.exe
+!steamcmd/windows/update_cs2.bat
+!steamcmd/windows/update_cs2_server.txt
