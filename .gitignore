@@ -1,7 +1,8 @@
+temp
+node_modules
+
 server/**
 !server/.gitkeep
-steamcmd/linux/**
-!steamcmd/linux/.gitkeep
 
 steamcmd/windows/**
 !steamcmd/windows/steamcmd.exe
