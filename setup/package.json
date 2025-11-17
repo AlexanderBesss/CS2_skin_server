@@ -5,11 +5,12 @@
   "license": "ISC",
   "author": "",
   "type": "module",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "dotenv -e .env -- node ./src/index.js"
   },
   "dependencies": {
-    "archive-wasm": "^2.1.0"
+    "archive-wasm": "^2.1.0",
+    "dotenv-cli": "^11.0.0"
   }
 }

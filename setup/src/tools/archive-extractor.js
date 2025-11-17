@@ -20,8 +20,6 @@ export async function archiveExtractor(archivePath, outputFolder) {
             await mkdir(fullPath, { recursive: true });
         } else if (entry.type === 'FILE') {
             await mkdir(dirname(fullPath), { recursive: true });
-
-            // Convert ArrayBuffer to Uint8Array
             const dataToWrite = entry.data instanceof ArrayBuffer
                 ? new Uint8Array(entry.data)
                 : entry.data;
