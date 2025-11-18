@@ -1,14 +1,14 @@
 import { config } from './config.js';
-import { cs2_dependencies } from './cs2-dependencies.js';
+import packageJson from '../package.json' with { type: "json" };
 import { archiveExtractor } from './tools/archive-extractor.js';
 import { downloader } from './tools/downloader.js';
 import { fileContains, replaceInFile } from './tools/file-helper.js';
 
 async function installMetamod() {
-    const archivePath = await downloader(cs2_dependencies.metamod[process.platform]);
-    await archiveExtractor(archivePath, config.ADDONS_FOLDER);
+    const archivePath = await downloader(packageJson.cs2.dependencies.metamod[process.platform]);
+    await archiveExtractor(archivePath, config.CSGO_FOLDER);
     const metamod = 'Game csgo/addons/metamod';
-    const gameinfoFilePath = `${config.ADDONS_FOLDER}/gameinfo.gi`;
+    const gameinfoFilePath = `${config.CSGO_FOLDER}/gameinfo.gi`;
     const isStringExist = await fileContains(gameinfoFilePath, metamod);
     const entry = 'Game_LowViolence	csgo_lv // Perfect World content override';
     if (!isStringExist) {
@@ -18,8 +18,8 @@ async function installMetamod() {
 }
 
 async function installCSSharpRuntime() {
-    const archivePath = await downloader(cs2_dependencies.cssharp.runtime[process.platform]);
-    await archiveExtractor(archivePath, config.ADDONS_FOLDER);
+    const archivePath = await downloader(packageJson.cs2.dependencies.cssharp.runtime[process.platform]);
+    await archiveExtractor(archivePath, config.CSGO_FOLDER);
     console.log("Successfully installed CSSharp Runtime!");
 }
 

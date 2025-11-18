@@ -1,16 +1,40 @@
 {
-  "name": "server_setup",
+  "name": "cs2_server_setup",
   "version": "1.0.0",
   "description": "",
   "license": "ISC",
-  "author": "",
+  "author": "Oleksand Besarab",
   "type": "module",
-  "main": "src/index.js",
+  "main": "src/install.js",
   "scripts": {
-    "start": "dotenv -e .env -- node ./src/index.js"
+    "wp:install": "npm i && dotenv -- node ./src/install.js",
+    "wp:configure": "dotenv -- node ./src/configure.js",
+    "wp:uninstall": "rimraf ./temp ../server/game/csgo/addons ../website"
   },
   "dependencies": {
     "archive-wasm": "^2.1.0",
-    "dotenv-cli": "^11.0.0"
+    "dotenv-cli": "^11.0.0",
+    "rimraf": "^6.1.0"
+  },
+  "cs2": {
+    "dependencies": {
+      "metamod": {
+        "linux": "https://mms.alliedmods.net/mmsdrop/2.0/mmsource-2.0.0-git1374-linux.tar.gz",
+        "win32": "https://mms.alliedmods.net/mmsdrop/2.0/mmsource-2.0.0-git1374-windows.zip"
+      },
+      "cssharp": {
+        "runtime": {
+          "linux": "https://github.com/roflmuffin/CounterStrikeSharp/releases/download/v1.0.347/counterstrikesharp-with-runtime-linux-1.0.347.zip",
+          "win32": "https://github.com/roflmuffin/CounterStrikeSharp/releases/download/v1.0.347/counterstrikesharp-with-runtime-windows-1.0.347.zip"
+        },
+        "plugins": {
+          "playerSettings": "https://github.com/NickFox007/PlayerSettingsCS2/releases/download/0.9.3/PlayerSettings.zip",
+          "anyBaseLib": "https://github.com/NickFox007/AnyBaseLibCS2/releases/download/0.9.4/AnyBaseLib.zip",
+          "menuManager": "https://github.com/NickFox007/MenuManagerCS2/releases/download/1.4.1/MenuManager.zip"
+        },
+        "weaponPaints": "https://github.com/Nereziel/cs2-WeaponPaints/releases/download/build-399/WeaponPaints.zip",
+        "weaponPaintsWebsite": "https://github.com/Nereziel/cs2-WeaponPaints/releases/download/build-399/WeaponPaints-Website.zip"
+      }
+    }
   }
 }

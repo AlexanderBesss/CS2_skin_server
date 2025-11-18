@@ -3,7 +3,6 @@ import { readFile, mkdir, writeFile } from 'node:fs/promises';
 import { dirname, join } from 'node:path';
 
 /**
- * 
  * @param {String} archivePath 
  * @param {String} outputFolder 
  */
@@ -15,7 +14,6 @@ export async function archiveExtractor(archivePath, outputFolder) {
 
     for (const entry of entries) {
         const fullPath = join(outputFolder, entry.path);
-
         if (entry.type === 'DIR') {
             await mkdir(fullPath, { recursive: true });
         } else if (entry.type === 'FILE') {

@@ -1,8 +1,12 @@
 import { installModTools } from './install-mod-tools.js';
 import { installPlugins } from './install-plugins.js';
-import { configureWeaponPaintsPlugin } from './configure-weapon-paints.js';
+import { WeaponPaints } from './weapon-paints.js';
 
+// Install mod tools
 await installModTools();
+
+// Install plugins
 await installPlugins();
 
-await configureWeaponPaintsPlugin();
+const weaponPaints = new WeaponPaints();
+await weaponPaints.install();

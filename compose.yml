@@ -14,7 +14,7 @@ services:
   
   webserver:
     image: php:8.3-apache
-    container_name: skins_web_server
+    container_name: skins_website
     build: .
     ports:
       - "80:80"
