@@ -1,8 +1,8 @@
 temp
 node_modules
 
-server/**
-!server/.gitkeep
+cs2/**
+!cs2/.gitkeep
 
 steamcmd/windows/**
 !steamcmd/windows/steamcmd.exe

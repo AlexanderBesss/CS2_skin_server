@@ -7,9 +7,10 @@
   "type": "module",
   "main": "src/install.js",
   "scripts": {
-    "wp:install": "npm i && dotenv -- node ./src/install.js",
-    "wp:configure": "dotenv -- node ./src/configure.js",
-    "wp:uninstall": "rimraf ./temp ../server/game/csgo/addons ../website"
+    "skins:install": "npm i && dotenv -- node ./src/install.js",
+    "skins:configure": "dotenv -- node ./src/configure.js",
+    "skins:uninstall": "rimraf temp ./cs2/game/csgo/addons website",
+    "skins:update": "node ./src/update-cs2.js"
   },
   "dependencies": {
     "archive-wasm": "^2.1.0",
@@ -30,7 +31,8 @@
         "plugins": {
           "playerSettings": "https://github.com/NickFox007/PlayerSettingsCS2/releases/download/0.9.3/PlayerSettings.zip",
           "anyBaseLib": "https://github.com/NickFox007/AnyBaseLibCS2/releases/download/0.9.4/AnyBaseLib.zip",
-          "menuManager": "https://github.com/NickFox007/MenuManagerCS2/releases/download/1.4.1/MenuManager.zip"
+          "menuManager": "https://github.com/NickFox007/MenuManagerCS2/releases/download/1.4.1/MenuManager.zip",
+          "simpleAdmin": "https://github.com/daffyyyy/CS2-SimpleAdmin/releases/download/build-1.7.8-beta-6/CS2-SimpleAdmin-1.7.8-beta-6.zip"
         },
         "weaponPaints": "https://github.com/Nereziel/cs2-WeaponPaints/releases/download/build-399/WeaponPaints.zip",
         "weaponPaintsWebsite": "https://github.com/Nereziel/cs2-WeaponPaints/releases/download/build-399/WeaponPaints-Website.zip"

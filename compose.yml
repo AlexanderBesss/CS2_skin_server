@@ -19,5 +19,5 @@ services:
     ports:
       - "80:80"
     volumes:
-      - ./website:/var/www/html
+      - ./cs2:/var/www/html
       

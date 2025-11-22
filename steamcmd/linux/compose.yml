@@ -3,7 +3,7 @@ services:
     image: cm2network/steamcmd
     container_name: Steam-CMD
     volumes:
-      - ../../server:/home/steam/server
+      - ../../cs2:/home/steam/cs2
     working_dir: /home/steam/steamcmd
     command: >
-      ./steamcmd.sh +force_install_dir /home/steam/server +login anonymous +app_update 730 validate +quit
+      ./steamcmd.sh +force_install_dir /home/steam/cs2 +login anonymous +app_update 730 validate +quit
