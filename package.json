@@ -7,10 +7,10 @@
   "type": "module",
   "main": "src/install.js",
   "scripts": {
-    "skins:install": "npm i && dotenv -- node ./src/install.js",
-    "skins:configure": "dotenv -- node ./src/configure.js",
-    "skins:uninstall": "rimraf temp ./cs2/game/csgo/addons website",
-    "skins:update": "node ./src/update-cs2.js"
+    "plugins:install": "npm i && dotenv -- node ./src/install.js",
+    "plugins:configure": "dotenv -- node ./src/configure.js",
+    "plugins:uninstall": "rimraf temp ./cs2/game/csgo/addons website",
+    "game:update": "node ./src/update-cs2.js"
   },
   "dependencies": {
     "archive-wasm": "^2.1.0",

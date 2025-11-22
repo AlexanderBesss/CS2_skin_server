@@ -25,15 +25,15 @@ async function updateCS2() {
         case 'linux':
             await runCommand('docker', [
                 'compose',
-                'up',
                 '-f',
-                '../steamcmd/linux/compose.yml'
+                './steamcmd/linux/compose.yml',
+                'up'
             ]);
             break;
         case 'win32':
             await runCommand('cmd', [
                 '/c',
-                '../steamcmd/windows/update_cs2.bat'
+                './steamcmd/windows/update_cs2.bat'
             ]);
             break;
 
