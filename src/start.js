@@ -1,27 +1,25 @@
+
+
 import { runCommands } from './tools/run-script.js';
 
-async function updateCS2() {
+async function start() {
     const OS = process.platform;
     switch (OS) {
         case 'linux':
             await runCommands([
-                'compose',
-                '-f',
-                './steamcmd/linux/compose.yml',
-                'up'
-            ], 'docker');
+                './start-linux.sh'
+            ]);
             break;
         case 'win32':
             await runCommands([
                 '/c',
-                './steamcmd/windows/update_cs2.bat'
+                './start-windows.bat'
             ]);
             break;
-
         default:
             console.log(OS, ' is unsupported OS!');
             break;
     }
 }
 
-await updateCS2();
+await start();
