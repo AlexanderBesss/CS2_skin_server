@@ -1,6 +1,6 @@
 # CS2 server with skins
 This project aims to simplify configuration process of CS2 server with skins.
-It support linux (tested) and windows server configurations.
+It support linux and windows server configurations.
 
 ## Software requirements
  - Docker v28+

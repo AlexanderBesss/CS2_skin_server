@@ -1,12 +1,13 @@
-import { runCommands } from './tools/run-script.js';
 import { spawn } from 'node:child_process';
+import path from 'path';
+import { fileURLToPath } from 'url';
 
 /**
- * @param {String} process 
- * @param {String[]} commands 
+ * @param {String} process
+ * @param {String[]} commands
  */
-export async function runCommands(processName, commands) {
-    const child = spawn(processName, commands);
+export async function runCommands(processName, commands, options) {
+    const child = spawn(processName, commands, options);
 
     for await (const chunk of child.stdout) {
         console.log('[OUT]', chunk.toString());
@@ -31,10 +32,15 @@ async function updateCS2() {
             ]);
             break;
         case 'win32':
+            const __filename = fileURLToPath(import.meta.url);
+            const __dirname = path.dirname(__filename);
+            const steamcmdDir = path.join(__dirname, '..', 'steamcmd', 'windows');
             await runCommands('cmd', [
                 '/c',
-                './steamcmd/windows/update_cs2.bat'
-            ]);
+                'update_cs2.bat'
+            ], {
+                cwd: steamcmdDir,
+            });
             break;
 
         default:

@@ -1,1 +1,1 @@
-steamcmd +runscript update_cs2_server.txt
+steamcmd.exe +runscript update_cs2_server.txt
