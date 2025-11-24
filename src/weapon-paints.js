@@ -21,7 +21,7 @@ export class WeaponPaints {
 
     async #installWebsite() {
         const weaponPaintsWebsiteFilePath = await downloader(packageJson.cs2.dependencies.cssharp.weaponPaintsWebsite);
-        await archiveExtractor(weaponPaintsWebsiteFilePath, '../');
+        await archiveExtractor(weaponPaintsWebsiteFilePath, './');
     }
 
     async #configurePlugin() {
@@ -52,7 +52,7 @@ export class WeaponPaints {
     }
 
     async configureWebsite() {
-        const websiteConfiguration = `../website/class/config.php`;
+        const websiteConfiguration = `./website/class/config.php`;
         if (fileContains(websiteConfiguration, "define('DB_NAME', '');")) {
             await replaceInFile(websiteConfiguration, "define('DB_NAME', '');", `define('DB_NAME', '${config.MYSQL_DATABASE}');`);
         }
