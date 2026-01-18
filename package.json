@@ -9,7 +9,7 @@
   "scripts": {
     "plugins:install": "npm i && dotenv -- node ./src/install.js",
     "plugins:configure": "dotenv -- node ./src/configure.js",
-    "plugins:uninstall": "rimraf temp ./cs2/game/csgo/addons website",
+    "plugins:uninstall": "rimraf temp ./cs2/game/csgo/addons website ./cs2/game/csgo/counterstrikesharp",
     "game:update": "node ./src/update-cs2.js"
   },
   "dependencies": {
@@ -20,13 +20,13 @@
   "cs2": {
     "dependencies": {
       "metamod": {
-        "linux": "https://mms.alliedmods.net/mmsdrop/2.0/mmsource-2.0.0-git1374-linux.tar.gz",
-        "win32": "https://mms.alliedmods.net/mmsdrop/2.0/mmsource-2.0.0-git1374-windows.zip"
+        "linux": "https://mms.alliedmods.net/mmsdrop/2.0/mmsource-2.0.0-git1380-linux.tar.gz",
+        "win32": "https://mms.alliedmods.net/mmsdrop/2.0/mmsource-2.0.0-git1380-windows.zip"
       },
       "cssharp": {
         "runtime": {
-          "linux": "https://github.com/roflmuffin/CounterStrikeSharp/releases/download/v1.0.347/counterstrikesharp-with-runtime-linux-1.0.347.zip",
-          "win32": "https://github.com/roflmuffin/CounterStrikeSharp/releases/download/v1.0.347/counterstrikesharp-with-runtime-windows-1.0.347.zip"
+          "linux": "https://github.com/roflmuffin/CounterStrikeSharp/releases/download/v1.0.356/counterstrikesharp-with-runtime-linux-1.0.356.zip",
+          "win32": "https://github.com/roflmuffin/CounterStrikeSharp/releases/download/v1.0.356/counterstrikesharp-with-runtime-windows-1.0.356.zip"
         },
         "plugins": {
           "playerSettings": "https://github.com/NickFox007/PlayerSettingsCS2/releases/download/0.9.3/PlayerSettings.zip",
