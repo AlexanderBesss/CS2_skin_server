@@ -10,7 +10,8 @@
     "plugins:install": "npm i && dotenv -- node ./src/install.js",
     "plugins:configure": "dotenv -- node ./src/configure.js",
     "plugins:uninstall": "rimraf temp ./cs2/game/csgo/addons website ./cs2/game/csgo/counterstrikesharp",
-    "game:update": "node ./src/update-cs2.js"
+    "game:update": "node ./src/update-cs2.js",
+    "docker:build": "docker compose up -d --build"
   },
   "dependencies": {
     "archive-wasm": "^2.1.0",

@@ -21,6 +21,14 @@ Follow those steps in order to configure the server:
 4. `npm run plugins:configure`: it will configure all plugins. The default configuration it should will work on localhost. Check `.env` file for more granular configuration.
 5. **[OPTIONAL]** `npm run plugins:uninstall`: if you to want remove all plugins from the server.
 
+### Ubuntu - https://developer.valvesoftware.com/wiki/SteamCMD
+
+To install SteamCMD for linux run
+
+`sudo add-apt-repository multiverse; sudo dpkg --add-architecture i386; sudo apt update`
+
+`sudo apt install steamcmd`
+
 
 
 

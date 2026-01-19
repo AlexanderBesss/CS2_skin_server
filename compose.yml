@@ -17,7 +17,7 @@ services:
     container_name: skins_website
     build: .
     ports:
-      - "80:80"
+      - "0.0.0.0:8080:80"
     volumes:
       - ./website:/var/www/html
       
