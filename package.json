@@ -26,8 +26,8 @@
       },
       "cssharp": {
         "runtime": {
-          "linux": "https://github.com/roflmuffin/CounterStrikeSharp/releases/download/v1.0.359/counterstrikesharp-with-runtime-linux-1.0.359.zip",
-          "win32": "https://github.com/roflmuffin/CounterStrikeSharp/releases/download/v1.0.359/counterstrikesharp-with-runtime-windows-1.0.359.zip"
+          "linux": "https://github.com/roflmuffin/CounterStrikeSharp/releases/download/v1.0.361/counterstrikesharp-with-runtime-linux-1.0.361.zip",
+          "win32": "https://github.com/roflmuffin/CounterStrikeSharp/releases/download/v1.0.361/counterstrikesharp-with-runtime-windows-1.0.361.zip"
         },
         "plugins": {
           "playerSettings": "https://github.com/NickFox007/PlayerSettingsCS2/releases/download/0.9.3/PlayerSettings.zip",
@@ -35,8 +35,8 @@
           "menuManager": "https://github.com/NickFox007/MenuManagerCS2/releases/download/1.4.1/MenuManager.zip",
           "simpleAdmin": "https://github.com/daffyyyy/CS2-SimpleAdmin/releases/download/build-1.7.8-beta-6/CS2-SimpleAdmin-1.7.8-beta-6.zip"
         },
-        "weaponPaints": "https://github.com/Nereziel/cs2-WeaponPaints/releases/download/build-408/WeaponPaints.zip",
-        "weaponPaintsWebsite": "https://github.com/Nereziel/cs2-WeaponPaints/releases/download/build-408/WeaponPaints-Website.zip"
+        "weaponPaints": "https://github.com/Nereziel/cs2-WeaponPaints/releases/download/build-411/WeaponPaints.zip",
+        "weaponPaintsWebsite": "https://github.com/Nereziel/cs2-WeaponPaints/releases/download/build-411/WeaponPaints-Website.zip"
       }
     }
   }
